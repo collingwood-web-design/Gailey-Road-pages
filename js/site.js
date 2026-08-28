@@ -33,4 +33,19 @@
       if (box) box.classList.add("success");
     });
   });
+
+  document.querySelectorAll(".oas-bio-toggle-input").forEach(function (input) {
+    var entry = input.closest(".oas-cast-entry");
+    if (!entry) return;
+    var shortBio = entry.querySelector(".oas-bio-short");
+    var fullBio = entry.querySelector(".oas-bio-full");
+    function sync() {
+      var showFull = input.checked;
+      if (shortBio) shortBio.hidden = showFull;
+      if (fullBio) fullBio.hidden = !showFull;
+      input.setAttribute("aria-checked", showFull ? "true" : "false");
+    }
+    input.addEventListener("change", sync);
+    sync();
+  });
 })();
