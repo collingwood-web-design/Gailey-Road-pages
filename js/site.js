@@ -2,9 +2,19 @@
   var nav = document.querySelector(".mobile-nav");
   var toggle = document.querySelector(".nav-toggle");
   if (toggle && nav) {
-    toggle.addEventListener("click", function () {
-      var open = nav.classList.toggle("is-open");
+    var label = toggle.querySelector(".nav-toggle-label");
+    function setNavOpen(open) {
+      nav.classList.toggle("is-open", open);
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      toggle.setAttribute("aria-label", open ? "Close menu" : "Menu");
+      if (label) {
+        label.textContent = open
+          ? label.getAttribute("data-close") || "X"
+          : label.getAttribute("data-open") || "Menu";
+      }
+    }
+    toggle.addEventListener("click", function () {
+      setNavOpen(!nav.classList.contains("is-open"));
     });
   }
 

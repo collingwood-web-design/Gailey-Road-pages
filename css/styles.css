@@ -3343,16 +3343,39 @@ blockquote.testimonial {
   }
 
   .nav-toggle {
-    display: block;
-    border: 0;
-    background: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 64px;
+    min-height: 40px;
+    border: 2px solid #699b06;
+    background: #fff;
     color: #699b06;
     font: inherit;
     font-size: 13px;
+    font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     cursor: pointer;
-    padding: 10px 0;
+    padding: 8px 14px;
+    line-height: 1;
+  }
+
+  .nav-toggle[aria-expanded="true"] {
+    background: #699b06;
+    color: #fff;
+  }
+
+  .nav-toggle-label {
+    display: block;
+    font-size: inherit;
+    line-height: 1;
+  }
+
+  .nav-toggle[aria-expanded="true"] .nav-toggle-label {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1;
   }
 
   .mobile-nav {
