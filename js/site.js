@@ -36,14 +36,6 @@
     });
   });
 
-  document.querySelectorAll(".newsletter-form").forEach(function (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      var box = form.closest(".newsletter");
-      if (box) box.classList.add("success");
-    });
-  });
-
   document.querySelectorAll(".oas-bio-toggle-input").forEach(function (input) {
     var entry = input.closest(".oas-cast-entry");
     if (!entry) return;
