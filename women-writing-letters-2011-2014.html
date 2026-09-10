@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-CA">
 <head>
+    <script>
+      /* Prefer clean URLs when someone lands on the .html form. */
+      (function () {
+        var path = window.location.pathname;
+        if (!/\.html$/i.test(path)) return;
+        var clean = path.replace(/\.html$/i, "");
+        if (/\/index$/i.test(clean)) clean = clean.replace(/\/index$/i, "/") || "/";
+        if (clean === "") clean = "/";
+        window.location.replace(clean + window.location.search + window.location.hash);
+      })();
+    </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Women Writing Letters, Gailey Road’s literary performance series (2011–2015) produced by Tara Goldstein and Margot Huycke, with published letter collections.">
@@ -9,13 +21,13 @@
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="googlebot" content="index, follow">
   <meta name="theme-color" content="#699b06">
-  <link rel="canonical" href="https://gaileyroad.com/women-writing-letters-2011-2014.html">
+  <link rel="canonical" href="https://gaileyroad.com/women-writing-letters-2011-2014">
   <meta property="og:locale" content="en_CA">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Gailey Road Productions">
   <meta property="og:title" content="Women Writing Letters 2011–2015 | Gailey Road Productions">
   <meta property="og:description" content="Women Writing Letters, Gailey Road’s literary performance series (2011–2015) produced by Tara Goldstein and Margot Huycke, with published letter collections.">
-  <meta property="og:url" content="https://gaileyroad.com/women-writing-letters-2011-2014.html">
+  <meta property="og:url" content="https://gaileyroad.com/women-writing-letters-2011-2014">
   <meta property="og:image" content="https://media.cwd-cdn.com/gailey-road/images/women-writing-letters.jpg">
   <meta property="og:image:alt" content="Women Writing Letters event poster">
   <meta name="twitter:card" content="summary_large_image">
@@ -29,8 +41,8 @@
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://gaileyroad.com/women-writing-letters-2011-2014.html#webpage",
-  "url": "https://gaileyroad.com/women-writing-letters-2011-2014.html",
+  "@id": "https://gaileyroad.com/women-writing-letters-2011-2014#webpage",
+  "url": "https://gaileyroad.com/women-writing-letters-2011-2014",
   "name": "Women Writing Letters 2011–2015 | Gailey Road Productions",
   "description": "Women Writing Letters, Gailey Road’s literary performance series (2011–2015) produced by Tara Goldstein and Margot Huycke, with published letter collections.",
   "isPartOf": {
@@ -61,44 +73,44 @@
   <header class="site-header">
     <div class="header-inner">
       <ul class="nav-left" aria-label="Primary left">
-        <li><a href="index.html">Home</a></li>
-        <li class="is-current"><a href="productions.html">Productions</a></li>
+        <li><a href="./">Home</a></li>
+        <li class="is-current"><a href="productions">Productions</a></li>
         <li class="has-sub"><a href="#">Biographies</a>
           <ul class="sub-menu">
-            <li><a href="company-biography.html">Company Biography</a></li>
-            <li><a href="current-artist-team.html">Current Artist Team</a></li>
+            <li><a href="company-biography">Company Biography</a></li>
+            <li><a href="current-artist-team">Current Artist Team</a></li>
           </ul>
         </li>
       </ul>
-      <a class="logo" href="index.html"><img src="https://media.cwd-cdn.com/gailey-road/images/logo.jpg" alt="Gailey Road Productions" width="500" height="130"></a>
+      <a class="logo" href="./"><img src="https://media.cwd-cdn.com/gailey-road/images/logo.jpg" alt="Gailey Road Productions" width="500" height="130"></a>
       <ul class="nav-right" aria-label="Primary right">
         <li class="has-sub"><a href="#">Publications</a>
           <ul class="sub-menu">
-            <li><a href="publications-2007-2017.html">2007-2017</a></li>
-            <li><a href="publications-2018-2027.html">2018-2027</a></li>
+            <li><a href="publications-2007-2017">2007-2017</a></li>
+            <li><a href="publications-2018-2027">2018-2027</a></li>
           </ul>
         </li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact">Contact</a></li>
       </ul>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Menu"><span class="nav-toggle-label" data-open="Menu" data-close="X">Menu</span></button>
     </div>
     <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li class="is-current"><a href="productions.html">Productions</a></li>
+        <li><a href="./">Home</a></li>
+        <li class="is-current"><a href="productions">Productions</a></li>
         <li class="has-sub"><a href="#">Biographies</a>
           <ul class="sub-menu">
-            <li><a href="company-biography.html">Company Biography</a></li>
-            <li><a href="current-artist-team.html">Current Artist Team</a></li>
+            <li><a href="company-biography">Company Biography</a></li>
+            <li><a href="current-artist-team">Current Artist Team</a></li>
           </ul>
         </li>
         <li class="has-sub"><a href="#">Publications</a>
           <ul class="sub-menu">
-            <li><a href="publications-2007-2017.html">2007-2017</a></li>
-            <li><a href="publications-2018-2027.html">2018-2027</a></li>
+            <li><a href="publications-2007-2017">2007-2017</a></li>
+            <li><a href="publications-2018-2027">2018-2027</a></li>
           </ul>
         </li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -230,13 +242,13 @@
             <h4>productions</h4>
           </div>
           <ul class="prod-list">
-            <li><a href="4-day-arts-based-research-workshop-2025.html">4-Day Arts-Based Research Workshop 2025</a></li>
-            <li><a href="the-fashionista-project-2024.html">The Fashionista Project 2024</a></li>
-            <li><a href="the-love-booth-williamstown.html">The Love Booth Williamstown</a></li>
-            <li><a href="the-love-booth-companion-plays.html">The Love Booth and Six Companion Plays</a></li>
-            <li><a href="out-at-school-2019.html">Out at School</a></li>
-            <li><a href="what-parents-want-2022.html">What Parents Want 2022</a></li>
-            <li class="prod-list-all"><a href="productions.html">View all productions →</a></li>
+            <li><a href="4-day-arts-based-research-workshop-2025">4-Day Arts-Based Research Workshop 2025</a></li>
+            <li><a href="the-fashionista-project-2024">The Fashionista Project 2024</a></li>
+            <li><a href="the-love-booth-williamstown">The Love Booth Williamstown</a></li>
+            <li><a href="the-love-booth-companion-plays">The Love Booth and Six Companion Plays</a></li>
+            <li><a href="out-at-school-2019">Out at School</a></li>
+            <li><a href="what-parents-want-2022">What Parents Want 2022</a></li>
+            <li class="prod-list-all"><a href="productions">View all productions →</a></li>
           </ul>
         </div>
       </div>
@@ -250,7 +262,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="wrap">Copyright © 2026 <a href="index.html">Gailey Road Productions</a> | design &amp; develop <a href="https://collingwoodwebdesign.com" target="_blank" rel="noopener">collingwood web design</a></div>
+      <div class="wrap">Copyright © 2026 <a href="./">Gailey Road Productions</a> | design &amp; develop <a href="https://collingwoodwebdesign.com" target="_blank" rel="noopener">collingwood web design</a></div>
     </div>
   </footer>
   <script src="js/site.js?v=72"></script>
