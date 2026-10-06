@@ -685,6 +685,34 @@ blockquote.testimonial {
   margin: 1.5em 0;
 }
 
+.lb-video {
+  margin: 1.5em 0 0;
+}
+
+.conv-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 36px 32px;
+}
+
+.conv-video {
+  margin: 0;
+}
+
+.conv-video h3 {
+  margin: 0 0 0.6em;
+  font-size: 20px;
+  color: #699b06;
+  text-transform: none;
+}
+
+@media (max-width: 700px) {
+  .conv-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
 .btn-script {
   display: inline-block;
   background: #699b06;
