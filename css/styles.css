@@ -401,6 +401,13 @@ blockquote h2 {
   border: 0;
 }
 
+.media-short {
+  aspect-ratio: 9 / 16;
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Buzzsprout large-player embeds only — use class="buzz", not on YouTube (.media) iframes */
 .buzz {
   display: block;
@@ -914,6 +921,15 @@ blockquote.testimonial {
 
 .williamstown-cta {
   margin: 1em 0 0;
+}
+
+.williamstown-video-row {
+  align-items: center;
+}
+
+.williamstown-video {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .fashionista-page {
