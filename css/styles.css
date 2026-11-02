@@ -1334,10 +1334,17 @@ blockquote.testimonial {
 
 .conference-grid {
   display: grid;
-  grid-template-columns: minmax(0, 280px) 1fr;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
   gap: 36px;
   align-items: start;
   margin-bottom: 1.75em;
+}
+
+.conference-media {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: start;
 }
 
 .conference-photo {
@@ -3430,8 +3437,12 @@ blockquote.testimonial {
     max-width: 280px;
   }
 
+  .conference-media {
+    max-width: 520px;
+  }
+
   .conference-photo {
-    max-width: 260px;
+    max-width: none;
   }
 
   .fashionista-gallery {
@@ -3584,7 +3595,8 @@ blockquote.testimonial {
 }
 
 @media (max-width: 700px) {
-  .news-lead-media {
+  .news-lead-media,
+  .conference-media {
     grid-template-columns: 1fr;
     max-width: 420px;
   }
