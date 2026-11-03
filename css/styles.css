@@ -1329,17 +1329,13 @@ blockquote.testimonial {
 }
 
 .conference-content {
-  max-width: 1100px;
-}
-
-.conference-text {
-  margin: 0 0 1.75em;
+  max-width: 1200px;
 }
 
 .conference-media {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
   align-items: start;
   margin-bottom: 1.75em;
 }
@@ -1361,10 +1357,18 @@ blockquote.testimonial {
   color: #555;
 }
 
+.conference-text {
+  margin: 0;
+  padding: 16px;
+  border: 3px solid #699b06;
+  box-sizing: border-box;
+  min-height: 100%;
+}
+
 .conference-text p {
   margin: 0;
-  font-size: 17px;
-  line-height: 1.7;
+  font-size: 15px;
+  line-height: 1.6;
 }
 
 .conference-program {
@@ -3434,8 +3438,8 @@ blockquote.testimonial {
   }
 
   .conference-media {
-    grid-template-columns: 1fr;
-    max-width: 420px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: none;
   }
 
   .fashionista-gallery {
@@ -3588,7 +3592,11 @@ blockquote.testimonial {
 }
 
 @media (max-width: 700px) {
-  .news-lead-media,
+  .news-lead-media {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+  }
+
   .conference-media {
     grid-template-columns: 1fr;
     max-width: 420px;
