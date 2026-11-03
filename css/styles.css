@@ -1329,22 +1329,19 @@ blockquote.testimonial {
 }
 
 .conference-content {
-  max-width: 980px;
+  max-width: 1100px;
 }
 
-.conference-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-  gap: 36px;
-  align-items: start;
-  margin-bottom: 1.75em;
+.conference-text {
+  margin: 0 0 1.75em;
 }
 
 .conference-media {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
   align-items: start;
+  margin-bottom: 1.75em;
 }
 
 .conference-photo {
@@ -3268,7 +3265,6 @@ blockquote.testimonial {
   .news-lead,
   .page-intro-grid,
   .williamstown-grid,
-  .conference-grid,
   .dust-hero,
   .anniversary-hero,
   .castor-hero,
@@ -3438,11 +3434,8 @@ blockquote.testimonial {
   }
 
   .conference-media {
-    max-width: 520px;
-  }
-
-  .conference-photo {
-    max-width: none;
+    grid-template-columns: 1fr;
+    max-width: 420px;
   }
 
   .fashionista-gallery {
